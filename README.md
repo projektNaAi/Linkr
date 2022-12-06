@@ -6,5 +6,10 @@ Jakub Idziński
 Jakub Bednarz   
 Michał Redkwa 
 
-## Baza danych
-Pamietaj aby w '.env' zmienić użytkownika oraz hasło
+## Działanie
+Pamietaj aby w '.env' zmienić użytkownika oraz hasło.  
+Użyj komend:  
+```
+# php bin/console doctrine:database:create
+# symfony server:start
+```
