@@ -1,5 +1,5 @@
 # Linkr
-Uczestnicy projektu:
+Uczestnicy projektu:  
 Dominik Dzięgielewski  
 Michał Wrzesień  
 Jakub Idziński  
