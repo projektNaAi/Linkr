@@ -1,10 +1,11 @@
 <?php
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
-class MainController {
+class MainController extends AbstractController {
     public function loginPage(): Response {
-        return new Response("<html><body>Panel logowania</body></html>");
+        return $this->render('logowanie.html.twig');
     }
 }
