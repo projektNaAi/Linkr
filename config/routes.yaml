@@ -4,6 +4,10 @@ controllers:
         namespace: App\Controller
     type: attribute
 
-main:
+app_login:
     path: /login
-    controller: App\Controller\MainController::loginPage
+    controller: App\Controller\LoginController::index
+
+app_register:
+    path: /register
+    controller: App\Controller\RegistrationController::register
