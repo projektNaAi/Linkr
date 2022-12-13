@@ -7,9 +7,9 @@ Jakub Bednarz
 Michał Redkwa 
 
 # Zależności
-Composer 2 lub nowszy
-MySQL 8 lub nowszy
-Symfony CLI
+- Composer 2 lub nowszy
+- MySQL 8 lub nowszy
+- Symfony CLI
 
 ## Działanie
 Pamietaj aby w '.env' zmienić użytkownika oraz hasło.  
