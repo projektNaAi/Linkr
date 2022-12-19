@@ -1,0 +1,40 @@
+{% block header %}
+    <style>
+        .navbar{
+
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #0288D1;
+        }
+    </style>
+    <div class="navbar">
+        <ul>
+            <li><a href="<?= #home?>">Home</a></li>
+            <li><a href="<?= #linkList ?>">Link list</a></li>
+            <li><a href="<?= #ManageAccount ?>">Manage account</a></li>
+            <li style="float:right"><a href="<?= #Register ?>">Register</a></li>
+            <li style="float:right"><a href="<?= #Login ?>">Login</a></li>
+
+        </ul>
+    </div>
+{% endblock %}

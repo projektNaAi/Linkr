@@ -8,6 +8,6 @@ class MainController extends AbstractController
 {
     public function index(): Response
     {
-        return new Response('<h1>Main page</h1>');
+        return $this->render('base.html.twig');
     }
 }
