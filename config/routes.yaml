@@ -8,6 +8,9 @@ app_login:
     path: /login
     controller: App\Controller\LoginController::index
 
+app_logout:
+    path: /logout
+
 app_register:
     path: /register
     controller: App\Controller\RegistrationController::register
