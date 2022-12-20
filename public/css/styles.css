@@ -1,22 +1,33 @@
-.btn {
+.btnBlue {
     background-color: #0288D1;
     color: white;
     padding: 16px 20px;
-    margin: 8px 0;
+    margin: 8px;
     border: none;
     cursor: pointer;
     width: 10%;
     opacity: 0.9;
 }
 
-.btn:hover {
+.btnBlue:hover, .btnRed:hover {
     opacity: 1;
+}
+
+.btnRed {
+    background-color: #D50000;
+    color: white;
+    padding: 16px 20px;
+    margin: 12px;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+    opacity: 0.9;
 }
 
 input[type=text], input[type=password] {
     width: 20%;
     padding: 15px;
-    margin: 5px 0 22px 0;
+    margin: 5px 22px;
     display: inline-block;
     border: none;
     background: #f1f1f1;

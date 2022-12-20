@@ -1,39 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}Sign in{% endblock %}
 
 {% block body %}
-    <style>
-        .btn {
-            background-color: #0288D1;
-            color: white;
-            padding: 16px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 10%;
-            opacity: 0.9;
-        }
-
-        .btn:hover {
-            opacity: 1;
-        }
-
-        input[type=text], input[type=password] {
-            width: 20%;
-            padding: 15px;
-            margin: 5px 0 22px 0;
-            display: inline-block;
-            border: none;
-            background: #f1f1f1;
-        }
-
-        input[type=text]:focus, input[type=password]:focus {
-            background-color: #ddd;
-            outline: none;
-        }
-
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 
     <h2>Register</h2>
     <p>Please fill in this form to create an account.   </p>
@@ -45,7 +15,7 @@
         }) }}
         {# {{ form_row(registrationForm.agreeTerms) }} #}
 
-        <button type="submit" class="btn">Register</button>
+        <button type="submit" class="btnBlue">Register</button>
     {{ form_end(registrationForm) }}
 {% endblock %}
 

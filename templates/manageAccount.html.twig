@@ -3,5 +3,10 @@
 {% block title %}Manage account{% endblock %}
 
 {% block body %}
-    <h1>Manage account</h1>
+    <form>
+        <h2>Manage account</h2>
+        <input type="text" id="username" name="_username" value=""><button type="submit" class="btnBlue">Change login</button></br>
+        <input type="password" id="password" name="_password"><button type="submit" class="btnBlue">Change password</button></br>
+        <button type="submit" class="btnRed">Delete account</button>
+    </form>
 {% endblock %}
