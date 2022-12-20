@@ -33,4 +33,4 @@ app_manageaccount:
 
 app_generate:
     path: /generate
-    controller: App\Controller\GenerateController::index
+    controller: App\Controller\GenerateController::new
