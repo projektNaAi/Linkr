@@ -29,7 +29,7 @@ app_userlist:
 
 app_manageaccount:
     path: /manageaccount
-    controller: App\Controller\ManageAccountController::index
+    controller: App\Controller\ManageAccountController::changeLoginPassword
 
 app_generate:
     path: /generate
