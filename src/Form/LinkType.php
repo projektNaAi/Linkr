@@ -17,7 +17,6 @@ class LinkType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('shortLink', TextType::class)
             ->add('longLink', TextType::class)
             ->add('save', SubmitType::class)
         ;
