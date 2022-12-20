@@ -34,3 +34,7 @@ app_manageaccount:
 app_generate:
     path: /generate
     controller: App\Controller\GenerateController::new
+
+link:
+    path: /{shortcut}
+    controller: App\Controller\MainController::show

@@ -1,5 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
 {% if form1 is defined %}
 {{ form(form1) }}
 {% else %}
 <p>Utworzono link: {{ app.request.baseUrl }}/{{ short }}</p>
 {% endif %}
+
+{% endblock %}
