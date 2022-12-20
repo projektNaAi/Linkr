@@ -15,69 +15,76 @@ class Link
 
     #[ORM\ManyToOne(inversedBy: 'links')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?User $user_id = null;
+    private ?User $user = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $nazwa = null;
+    private ?string $name = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $adres = null;
+    private ?string $longLink = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $data_utworzenia = null;
+    private ?string $dateCreated = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $skrot_adresu = null;
+    private ?string $shortLink = null;
     
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getUserId(): ?User
+    public function setId(?User $id): self
     {
-        return $this->user_id;
-    }
-
-    public function setUserId(?User $user_id): self
-    {
-        $this->user_id = $user_id;
+        $this->id = $id;
 
         return $this;
     }
 
-    public function getAdres(): ?string
+    public function getUser(): ?User
     {
-        return $this->adres;
+        return $this->user;
     }
 
-    public function setAdres(string $adres): self
+    public function setUserId(?User $user): self
     {
-        $this->adres = $adres;
+        $this->user = $user;
 
         return $this;
     }
 
-    public function getDataUtworzenia(): ?string
+    public function getLongLink(): ?string
     {
-        return $this->data_utworzenia;
+        return $this->longLink;
     }
 
-    public function setDataUtworzenia(string $data_utworzenia): self
+    public function setLongLink(string $longLink): self
     {
-        $this->data_utworzenia = $data_utworzenia;
+        $this->longLink = $longLink;
 
         return $this;
     }
 
-    public function getSkrotAdresu(): ?string
+    public function getDateCreated(): ?string
     {
-        return $this->skrot_adresu;
+        return $this->dateCreated;
     }
 
-    public function setSkrotAdresu(string $skrot_adresu): self
+    public function setDateCreated(string $dateCreated): self
     {
-        $this->skrot_adresu = $skrot_adresu;
+        $this->dateCreated = $dateCreated;
+
+        return $this;
+    }
+
+    public function getShortLink(): ?string
+    {
+        return $this->shortLink;
+    }
+
+    public function setShortLink(string $shortLink): self
+    {
+        $this->shortLink = $shortLink;
 
         return $this;
     }
