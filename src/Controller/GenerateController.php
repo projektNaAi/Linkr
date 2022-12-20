@@ -1,8 +1,12 @@
 <?php
 namespace App\Controller;
 
+use App\Entity\Link;
+use App\Form\LinkType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
+
 
 class GenerateController extends AbstractController {
     public function index(): Response {
