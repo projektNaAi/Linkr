@@ -17,13 +17,13 @@ class Link
     #[ORM\JoinColumn(nullable: false)]
     private ?User $user = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $name = null;
 
     #[ORM\Column(length: 255)]
     private ?string $longLink = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $dateCreated = null;
 
     #[ORM\Column(length: 255)]
@@ -46,7 +46,7 @@ class Link
         return $this->user;
     }
 
-    public function setUserId(?User $user): self
+    public function setUser(?User $user): self
     {
         $this->user = $user;
 

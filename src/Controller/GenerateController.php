@@ -15,7 +15,7 @@ class GenerateController extends AbstractController {
         return $this->render('gen/generate.html.twig');
     }
 
-    public function new(Request $request, LinkRepository $linkRepository): Response
+    public function new(Request $request, LinkRepository $linkRepository, EntityManagerInterface $entityManager): Response
     {
         // creates a task object and initializes some data for this example
         $link = new Link();
@@ -27,7 +27,8 @@ class GenerateController extends AbstractController {
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            if (!$this->getUser())
+            $user = $this->getUser();
+            if (!$user)
                 return $this->render('gen/generate.html.twig');
             // $form->getData() holds the submitted values
             // but, the original `$link` variable has also been updated
@@ -47,17 +48,19 @@ class GenerateController extends AbstractController {
             } while (count($links) != 0);
 
             $link->setShortLink($shortcut);
+            $link->setUser($user);
         
-
             $entityManager->persist($link);
             $entityManager->flush();
 
             //return $this->redirectToRoute('task_success');
-            return $this->render('gen/generate.html.twig');
+            return $this->render('gen/generate.html.twig', [
+                'short' => $shortcut
+            ]);
         }
 
         return $this->render('gen/generate.html.twig', [
-            'form' => $form,
+            'form1' => $form,
         ]);
 
         // ...
