@@ -4,13 +4,6 @@
 
 {% block body %}
     <link rel="stylesheet" href="css/styles.css">
-    {# <form>
-        <h2>Manage account</h2>
-        <input type="text" id="username" name="_username" value=""><button type="submit" class="btnBlue">Change login</button></br>
-        <input type="password" id="password" name="_password"><button type="submit" class="btnBlue">Change password</button></br>
-        <button type="submit" class="btnRed">Delete account</button>
-    </form> #}
-    {# {{ dump () }} #}
 
     {{ form_start(changeLoginForm) }}
         {{ form_row(changeLoginForm.username) }}
@@ -23,4 +16,13 @@
     }) }}
     <button type="submit" class="btnBlue">Change password</button>
     {{ form_end(changePasswordForm) }}
+
+    {{ form_start(removeAccountForm) }}
+    {{ form_row(removeAccountForm.password, {
+        label: 'Type your password'
+    }) }}
+    <button type="submit" class="btnBlue">Remove account</button>
+    {{ form_end(removeAccountForm) }}
+
+
 {% endblock %}
